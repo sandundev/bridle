@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bridle-voice-agent",
+  "version": "0.2.0",
+  "description": "Capture website feedback in Bridle before implementation, preserve REQ audit references, and guide review, diagnostics and handoff.",
+  "author": {
+    "name": "Bridle"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Bridle Voice Agent",
+        "shortDescription": "Bridle feedback workflows",
+        "longDescription": "Use the Bridle Chrome extension to capture and verify website feedback before implementing changes. Reuse saved REQ IDs, obtain the Bridle AI prompt or connector context, implement in the user\u2019s repository, and report verification per feedback. Also guides editing, review, completion, replay, diagnostics and ticket workflows. Requires Bridle installed in the connected Chrome profile and host-provided browser access; coding requires repository access. Typed and spoken requests are supported. Direct edits outside Bridle require an explicit user opt-out during a Bridle task.",
+        "developerName": "Bridle",
+        "category": "Productivity",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "Use Bridle to add visual feedback to the current page.",
+          "Inspect an existing Bridle feedback replay or capture network diagnostics.",
+          "Create or link a Bridle or Jira ticket from feedback."
+        ]
+      }
+    }
+  }
+}
