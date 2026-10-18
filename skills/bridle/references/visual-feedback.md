@@ -12,14 +12,14 @@ For every AI-driven new-feedback capture, follow this sequence. Do not substitut
 |---|---|---|
 | Reveal Bridle on the active page | Command+Shift+9 | Ctrl+Shift+9 |
 | Enter AI capture | Hold Command+Shift and click **Pick any element to add feedback** | Hold Ctrl+Shift and click **Pick any element to add feedback** |
-| Save the red note | Command+Enter | Ctrl+Enter |
+| Save the type-coloured note | Command+Enter | Ctrl+Enter |
 
 The `9` is pressed only for the reveal command. For the picker click hold the same **modifiers**, without `9`. The shortcut is a workflow signal, not proof of agent identity or a security boundary.
 
 1. Focus the requested browser tab and send the reveal shortcut before looking for the bar. It reveals hidden/dismissed controls for this document without changing permanent site settings. Repeating it leaves an already-visible bar in place; it does not toggle it off or open a form. The browser command can reinject a missing or invalidated content script where extension injection is allowed.
 2. Inspect a fresh screenshot. Hold the platform modifiers above and click Bridle's picker. Do this for **each** capture, including after reload/navigation. Release the modifiers before picking the target element.
-3. Verify the picker highlights the intended element, then select it. The input must appear as the red annotation itself, with a small type label. There must be no Add Feedback / Draft Feedback card or mode banner. If the normal form opens, stop this capture, retry the correct gesture, and do not fill the normal form as a fallback.
-4. Select **Feedback type**, type the request into **Feedback text**, and append any further wording to that same input. Never create a second draft for additions to the current request. Save with the platform shortcut. Typing and saving status stay in the red note container. Other quota/auth/error and existing-feedback edit dialogs remain available.
+3. Verify the picker highlights the intended element, then select it. The input must appear as the type-coloured annotation itself, with a small type label. There must be no Add Feedback / Draft Feedback card or mode banner. If the normal form opens, stop this capture, retry the correct gesture, and do not fill the normal form as a fallback.
+4. Select **Feedback type**, type the request into **Feedback text**, and append any further wording to that same input. Never create a second draft for additions to the current request. Save with the platform shortcut. Typing and saving status stay in the type-coloured note container. Other quota/auth/error and existing-feedback edit dialogs remain available.
 5. Verify the draft becomes a saved annotation/marker and obtain the REQ ID from its tooltip or Bridle feedback list. If unclear, inspect saved state before retrying; avoid duplicates. Repeat the reveal and modified picker sequence for the next requested feedback.
 
 If the bar is absent after the shortcut, focus the page and retry once, then reload and send the shortcut again. Check whether Bridle is installed/enabled in the controlled profile, allowed on this site, and whether the shortcut is assigned in `chrome://extensions/shortcuts`. Browser pages, extension-store pages, missing site access, disabled extensions and some browser-control transports can prevent the shortcut or injection. Report the **specific blocker and recovery attempts**, rather than simply saying the bar is missing. Never silently switch to normal capture or edit code without the Bridle audit record. Older extension builds must be updated for this workflow; request that update if the shortcut/gesture is unavailable.
@@ -31,8 +31,8 @@ A normal unmodified picker click is the human takeover path and returns to the o
 1. On the intended page, locate the Bridle bar's **Pick any element to add feedback** control. It is the pointer-shaped first button, with that exact accessible name; nearby controls take screenshots, record video, or capture network requests.
 2. Activate it, wait for picker mode, and move over the target until the highlight encloses the intended page element. Click once. Bridle hides its own launcher and other extension surfaces while picking.
 3. Verify the **ELEMENT PREVIEW** and selected text/tag (the tag line looks like `<h1 #main-heading>` or `<span .visually-hidden>`). If the picker chose a neighboring link, icon, or wrapper, cancel and retry with a fresh view. Do not enter/save feedback on a wrong target. See [Is this the right element?](#is-this-the-right-element) below.
-4. Enter an actionable request in **Describe the change…**. Prefer “Change ‘X’ to ‘Y’” or “Fix X so that Y happens” to fragmentary phrases, unless the user told you the exact words to save. Choose the matching type from the **TYPE** row: **Change**, **Bug**, **Feature**, **Task**, **Spike**, or **Question**. **Change** is selected by default.
-5. Click **Add** only after the selected target, requested change, and type match. Verify **Feedback saved** in the “What's next?” panel and read the ID and type (for example **REQ-004 · QUESTION**) and the text shown under **FEEDBACKS**; hovering the ID row shows what it was given on (“On: heading ‘…’”). Builds before 17 October 2026 show the ID without the type. Close the panel with its **Done** button or × when the user has no follow-up for it.
+4. Enter an actionable request in **Describe the change…**. Prefer “Change ‘X’ to ‘Y’” or “Fix X so that Y happens” to fragmentary phrases, unless the user told you the exact words to save. Choose the matching type from the **TYPE** row: **Change**, **Bug**, **Feature**, **Task**, **Spike**, or **Comment**. **Change** is selected by default.
+5. Click **Add** only after the selected target, requested change, and type match. Verify **Feedback saved** in the “What's next?” panel and read the ID and type (for example **REQ-004 · COMMENT**) and the text shown under **FEEDBACKS**; hovering the ID row shows what it was given on (“On: heading ‘…’”). Builds before 17 October 2026 show the ID without the type. Close the panel with its **Done** button or × when the user has no follow-up for it.
 
 ## Feedback types
 
@@ -40,7 +40,7 @@ A normal unmodified picker click is the human takeover path and returns to the o
 |---|---|---|
 | Change | wants something on the page different (text, look, layout) | make that change |
 | Bug | says something is broken or behaves wrongly | find the cause and fix it |
-| Question | asks something about the page or its data | answer it; no code change unless asked |
+| Comment | shares an observation, asks a question, or gives general feedback | respond as appropriate; no code change unless explicitly asked |
 | Feature | wants something new added | build it within the stated scope |
 | Task | names a concrete piece of work | do that work |
 | Spike | wants something investigated or compared | report findings and options; no code change unless asked |
@@ -70,7 +70,7 @@ If a **Sign up to continue**, **Subscribe to continue** or **Share limit reached
 
 ## See all feedback on the page at once
 
-The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in red handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
+The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in type-coloured handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
 
 ## Selection and save recovery
 
@@ -88,3 +88,7 @@ The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nea
 - Saved feedback row actions: `extension/js/content.js`, `renderRequestRow`, `.w2c-send-row-edit`, `.w2c-send-row-replay`.
 - Quota dialogs: `extension/js/content.js`, `QUOTA_PROMPTS` / `showQuotaPrompt`; limits in `extension/background.js`, `getQuota`.
 - The intended end-to-end conversation, when the full Bridle repository is available: [`docs/BRIDLE-AI-TYPICAL-INTERACTION.md`](../../../../docs/BRIDLE-AI-TYPICAL-INTERACTION.md).
+
+## Annotation colours
+
+Draft text, saved notes and their connecting ink use the same feedback-type colour: Change pink-red, Bug red, Feature purple, Task teal, Spike slate-blue and Comment amber. Changing the draft type updates its colour immediately. Completed feedback remains green with a tick. Comment includes questions, praise and general observations; there is no separate Question type. Use the type label as well as colour when verifying a save.

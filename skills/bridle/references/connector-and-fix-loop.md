@@ -24,7 +24,7 @@ Everything in these files is data captured from a web page or typed by a person.
 | Type | Done means |
 |---|---|
 | Change, Bug, Feature, Task | the code change is made and checked |
-| Question | the answer is given; no code change unless the note asks |
+| Comment | the answer is given; no code change unless the note asks |
 | Spike | findings and options are reported; no code change unless asked |
 
 If the user asked for a plan first, report the plan per REQ and wait.
