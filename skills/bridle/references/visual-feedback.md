@@ -4,7 +4,17 @@ This is the operational reference for Bridle's current extension UI.
 
 **Work from screenshots.** Bridle draws its bar, dialogs and panels in its own layer outside the page's `<body>`. Claude in Chrome's page reading (`read_page`, `find`) did not list any of it on 17 October 2026: the bar and an open Feedbacks panel were on screen but not in the tree. A probe page showed why: that reader lists only ordinary elements inside `<body>`, and skips anything inside a shadow root (even inside `<body>`) and anything outside `<body>`. Bridle uses both on purpose (they keep it above page dialogs and safe from the page's styles). Take a fresh screenshot after every step and click by its coordinates; never reuse coordinates from an earlier screenshot or another site (the bar moves with the window size). Other browser tools may see the controls by name (the names below are real accessible names); use them when your tool does.
 
-## Add a new item
+## Temporary AI assistant mode (when available)
+
+For a browser-driven capture session, open **Quick actions** (⋮ on the Bridle bar). If **AI assistant mode** is offered, enable it and verify the visible mode indicator. If a normal new-feedback form is already open, its **AI assistant mode** button switches that draft without losing the text. This setting is temporary and does not grant browser access or identify which assistant is operating. If the control is absent, use the normal capture steps below; older installed extensions may not include it.
+
+Use the same **Pick any element to add feedback** control. Instead of the full Add Feedback form, the selected element opens a small red draft note. Verify **Selected feedback element**, enter **Feedback text**, select **Feedback type**, then activate **Save feedback**. **Parent** and **Repick** correct the target; **Repick** preserves the draft text and type. Save only after matching the user's request and target. A stale or detached target requires another pick.
+
+After save, verify the mode indicator's **Saved · REQ-…** receipt, type and text, and the note beside the element. Repeat for each requested feedback. The notes use normal saved Bridle records and evidence; the assistant still supplies text through real browser controls, not an invisible form, extension internals or an API to another AI service. Auth/quota/error dialogs remain available. Existing feedback edits still use the normal edit form.
+
+At the end of the browser capture session, including when blocked or interrupted, use **Return to normal mode** when browser access is available. Verify the indicator disappears. An unfinished draft returns to the normal form; the mode also resets on navigation/reload or after five minutes without capture activity. Do not claim an explicit exit if browser access was lost. Do not use trusted mouse events as evidence that a human took control: assistant browser clicks can also be trusted.
+
+## Add a new item in normal mode
 
 1. On the intended page, locate the Bridle bar's **Pick any element to add feedback** control. It is the pointer-shaped first button, with that exact accessible name; nearby controls take screenshots, record video, or capture network requests.
 2. Activate it, wait for picker mode, and move over the target until the highlight encloses the intended page element. Click once. Bridle hides its own launcher and other extension surfaces while picking.
