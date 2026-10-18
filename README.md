@@ -15,7 +15,13 @@ In a Codex chat, ask:
 
 > Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle’s short first-time setup guide and ask me to complete `https://bridle.io/setup`. Do not show the direct Chrome Web Store URL unless I ask for it.
 
-The installed skill repeats this guide on the first Bridle-related turn unless setup is already confirmed or you provide a Bridle Copy AI prompt. A first-time guide covers installing through Bridle's setup page, enabling assistant access to the same Chrome profile, making one capture, and checking its feedback ID before implementation.
+The installed skill repeats this guide on the first Bridle-related turn unless setup is already confirmed or you provide a Bridle Copy AI prompt. It also gives copy-ready examples for capturing feedback, reviewing saved items, and capturing before implementation, so a new user has a concrete first command to try.
+
+Example prompts:
+
+- “Open [website] in Chrome and use Bridle to capture a Bug on [element]: [what happened]. Save it and tell me the REQ ID.”
+- “Review my latest Bridle feedback for [website]. Summarize the items and suggest next steps; don't change code yet.”
+- “Capture [issue] with Bridle, confirm the REQ ID, then investigate and fix it in this repository. Verify the result on [local or test URL].”
 
 Codex installs the skill and its reference guides into your user skills folder. It is available on the following turn; start a new chat if you want a clean conversation.
 

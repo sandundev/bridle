@@ -16,7 +16,15 @@ On the first Bridle-related interaction, unless the user has already confirmed s
 3. Enable the assistant's browser control for the same Chrome profile and grant access to the site they want to review. The Bridle skill does not install the extension or connect the browser.
 4. If they want implementation, open the website's code repository in the coding assistant as well. A client can still capture and review feedback without a code repository.
 
-For a first-time response, keep the guide concise: (a) install Bridle by following [bridle.io/setup](https://bridle.io/setup); (b) enable the assistant's browser access to the same Chrome profile; (c) open the site to review and ask the assistant to capture one precise Bug, Change, Question, Feature, Task or Spike; (d) verify the saved feedback ID before asking for implementation. Mention that the user completes any sign-up themselves and that a code repository is needed only if they want implementation. Ask them to visit the setup page and finish the steps before attempting browser work. Do not send setup instructions as feedback or append them to a Bridle record. If the user already used Bridle's **Copy AI prompt**, skip onboarding and continue from the saved feedback and REQ ID.
+For a first-time response, keep the guide concise: (a) install Bridle by following [bridle.io/setup](https://bridle.io/setup); (b) enable the assistant's browser access to the same Chrome profile; (c) open the site to review and ask the assistant to capture one precise Bug, Change, Question, Feature, Task or Spike; (d) verify the saved feedback ID before asking for implementation. Mention that the user completes any sign-up themselves and that a code repository is needed only if they want implementation. Ask them to visit the setup page and finish the steps before attempting browser work.
+
+Always include at least two short, copy-ready example prompts in that first-time guide. Use these three by default so the user can see the capture-only, review-only and implementation paths:
+
+- “Open [website] in Chrome and use Bridle to capture a Bug on [element]: [what happened]. Save it and tell me the REQ ID.”
+- “Review my latest Bridle feedback for [website]. Summarize the items and suggest next steps; don't change code yet.”
+- “Capture [issue] with Bridle, confirm the REQ ID, then investigate and fix it in this repository. Verify the result on [local or test URL].”
+
+Keep placeholders obvious, and explain that implementation requires the website repository and a local or test site. Do not send setup instructions as feedback or append them to a Bridle record. If the user already used Bridle's **Copy AI prompt**, skip onboarding and continue from the saved feedback and REQ ID.
 
 ## Bridle audit workflow: capture before implementation
 
