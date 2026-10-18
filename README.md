@@ -33,7 +33,7 @@ In the new chat, try:
 
 For Bridle tasks, the skill requires saving and verifying feedback before implementation, unless you explicitly ask the assistant to work outside Bridle. Existing Bridle feedback is reused by its REQ ID rather than captured twice.
 
-When the extension's Quick actions menu offers **AI assistant mode**, the skill uses a temporary red draft-note view for capture, verifies the saved REQ receipt, and returns to normal mode when finished. Edits and quota/auth dialogs keep their ordinary behavior. Navigation/reload and five minutes without capture activity also reset this mode. Older installed extensions use the normal capture form; this skill does not upgrade the browser extension.
+In extension builds with quiet capture, the skill Shift+clicks Bridle's existing picker button, selects the page element, writes directly in the red annotation and saves with Cmd/Ctrl+Enter. There is no draft card, mode banner or exit button. A regular picker click returns to the normal form; Escape, navigation/reload and five minutes without activity also end the temporary session. Older installed extensions use the normal capture form; this skill does not upgrade the browser extension.
 
 ## Package contents
 
