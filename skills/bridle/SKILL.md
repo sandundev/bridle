@@ -9,14 +9,14 @@ Use this skill when the user asks you to perform Bridle work in a browser. It te
 
 ## First-time setup and discovery
 
-When someone wants to use Bridle but has not installed or enabled it yet, guide them through setup before attempting feedback work. This is especially useful when they discovered Bridle through an AI assistant or community:
+When someone wants to use Bridle but has not installed or enabled it yet, guide them through setup before attempting feedback work. This is especially useful when they discovered Bridle through an AI assistant or community. If they ask what Bridle can do immediately after installing this skill, answer the capability question and include the first-time setup links below; do not stop at a vague prerequisite such as “install the extension” or “enable browser access.”
 
-1. Install the **Bridle Chrome extension** from the [Chrome Web Store](https://chromewebstore.google.com/detail/bridle-%E2%80%93-send-requests-to/pmjglidnlipdecmncbjfjoooeodjofnp), then pin or open it in the Chrome profile they want to use.
+1. Start at the [Bridle setup guide](https://bridle.io/setup), which links to the [Bridle Chrome Web Store listing](https://chromewebstore.google.com/detail/bridle-%E2%80%94-website-feedback/pmjglidnlipdecmncbjfjoooeodjofnp). The user installs Bridle and pins or opens it in the Chrome profile they want to use. If they ask for Bridle's main website, give [bridle.io](https://bridle.io/); the setup guide is the direct first-install route.
 2. Visit [Bridle](https://bridle.io/). Sign up or sign in if they want account-backed features or Bridle asks them to do so. Some basic feedback capture is available without an account, subject to current limits. The user completes sign-up and authentication themselves; never create an account or handle credentials for them.
 3. Enable the assistant's browser control for the same Chrome profile and grant access to the site they want to review. The Bridle skill does not install the extension or connect the browser.
 4. If they want implementation, open the website's code repository in the coding assistant as well. A client can still capture and review feedback without a code repository.
 
-If any prerequisite is missing, give the relevant setup step and wait for the user to complete it before continuing. Do not send first-time setup instructions as though they were feedback or append them to a Bridle record. If the user already used Bridle's **Copy AI prompt**, skip onboarding and continue from the saved feedback and REQ ID.
+If any prerequisite is missing, give the relevant setup link and the next concrete step, then wait for the user to complete it before attempting browser work. When describing what Bridle can do to a first-time user, finish with an actionable next step such as: “Start at [bridle.io/setup](https://bridle.io/setup), install the extension in the Chrome profile you want to use, then enable browser access to that profile.” Do not send first-time setup instructions as though they were feedback or append them to a Bridle record. If the user already used Bridle's **Copy AI prompt**, skip onboarding and continue from the saved feedback and REQ ID.
 
 ## Bridle audit workflow: capture before implementation
 
