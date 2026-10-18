@@ -34,3 +34,10 @@ If a feedback item is already linked, the main Jira action becomes **Open in Jir
 - Bridle board tickets require CloudSync access, a Bridle account, and an available project. A setup/upgrade prompt is not success.
 - Use the saved feedback's exact text/type and context. Do not silently change the feedback while creating a ticket.
 - Ticket/issue creation is independent for Bridle and Jira; verify each destination separately.
+
+## Source anchors
+
+- Bridle project selection and create confirmation: [`extension/js/content.js`](../../../../extension/js/content.js#L30730) and [`extension/js/content.js`](../../../../extension/js/content.js#L30759).
+- Bridle ticket action and CloudSync gate: [`extension/js/content.js`](../../../../extension/js/content.js#L40593).
+- Jira project/issue confirmation and create handoff: [`extension/js/jira-ui.js`](../../../../extension/js/jira-ui.js#L356) and [`extension/js/jira-ui.js`](../../../../extension/js/jira-ui.js#L383).
+- Jira connect, create, and linked states: [`extension/js/jira-ui.js`](../../../../extension/js/jira-ui.js#L444).

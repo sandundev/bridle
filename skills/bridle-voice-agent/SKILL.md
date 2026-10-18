@@ -1,11 +1,22 @@
 ---
 name: bridle-voice-agent
-description: Use Bridle in the user's browser to add or edit visual feedback (Bug, Change request, Question, Feature, Task, Spike), review completed (green) feedback, inspect a feedback replay, capture network diagnostics, create/link a Bridle or Jira ticket, or read Bridle's local AI connector folder and fix the feedback in a repository. Trigger when the user asks a voice or text agent to “ask Bridle”, “use Bridle”, or perform one of these Bridle workflows. Dictation often mishears the name as “Biddle”, “Brittle” or “Bridal”.
+description: Use the Bridle browser extension to capture or edit visual feedback (Bug, Change request, Question, Feature, Task, Spike), review completed feedback, inspect a replay, capture diagnostics, create/link tickets, or read Bridle's local AI connector folder and fix feedback in a repository. Trigger when the user asks to use Bridle, including by voice or text. If Bridle is not set up, guide first-time installation and browser access. Dictation may mishear Bridle as “Biddle”, “Brittle” or “Bridal”.
 ---
 
-# Bridle voice agent
+# Bridle assistant
 
 Use this skill when the user asks you to perform Bridle work in a browser. It teaches the workflow; it does not grant browser-control permissions, install the extension, or connect the agent to the user's Chrome profile. Use the browser/computer-use tool actually available in this session. If it cannot control the browser where Bridle is installed, explain that limitation and stop rather than simulating success.
+
+## First-time setup and discovery
+
+When someone wants to use Bridle but has not installed or enabled it yet, guide them through setup before attempting feedback work. This is especially useful when they discovered Bridle through an AI assistant or community:
+
+1. Install the **Bridle Chrome extension** from the [Chrome Web Store](https://chromewebstore.google.com/detail/bridle-%E2%80%93-send-requests-to/pmjglidnlipdecmncbjfjoooeodjofnp), then pin or open it in the Chrome profile they want to use.
+2. Visit [Bridle](https://bridle.io/). Sign up or sign in if they want account-backed features or Bridle asks them to do so. Some basic feedback capture is available without an account, subject to current limits. The user completes sign-up and authentication themselves; never create an account or handle credentials for them.
+3. Enable the assistant's browser control for the same Chrome profile and grant access to the site they want to review. The Bridle skill does not install the extension or connect the browser.
+4. If they want implementation, open the website's code repository in the coding assistant as well. A client can still capture and review feedback without a code repository.
+
+If any prerequisite is missing, give the relevant setup step and wait for the user to complete it before continuing. Do not send first-time setup instructions as though they were feedback or append them to a Bridle record. If the user already used Bridle's **Copy AI prompt**, skip onboarding and continue from the saved feedback and REQ ID.
 
 ## Bridle audit workflow: capture before implementation
 

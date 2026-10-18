@@ -31,3 +31,18 @@ Network requests/responses may contain private content or identifiers even when 
 6. Sharing, exporting, attaching to a feedback item, or sending to an AI tool is a separate decision. Do not assume a standalone network capture is attached to the selected feedback automatically; verify an explicit link/attachment in the UI.
 
 When the user asks to capture diagnostics and attach them to a feedback item, perform the capture first, then inspect the feedback's available attach/share UI and verify the link. If Bridle does not expose the requested attachment path in the current UI, report that limitation rather than claiming attachment.
+
+## Implementation notes
+
+- The launcher button is `.w2c-send-launcher-debug` with accessible name **Capture network requests**.
+- Existing captures open the network recordings modal; an empty library opens capture consent/setup.
+- The setup defaults to request/response capture, console, user actions, replay, and screenshots; header values and static HTML/CSS/JS bodies are opt-in. Domain/URL exclusion is available.
+- Active capture uses an in-page NET indicator with **Stop** and **Discard** paths. Stop uses `STOP_NETWORK_CAPTURE_AND_SAVE`; discard stops both the network and its associated replay stream.
+- A feedback row's replay action is **View session replay** and is disabled when that feedback has no saved replay.
+
+## Source anchors
+
+- Saved feedback replay action and open call: [`extension/js/content.js`](../../../../extension/js/content.js#L16519).
+- Replay overlay/player initialization: [`extension/js/content.js`](../../../../extension/js/content.js#L3769) and [`extension/js/content.js`](../../../../extension/js/content.js#L5870).
+- Network capture launch routing and consent setup: [`extension/js/content.js`](../../../../extension/js/content.js#L308) and [`extension/js/content.js`](../../../../extension/js/content.js#L1090).
+- Network stop/save indicator: [`extension/js/content.js`](../../../../extension/js/content.js#L952) and [`extension/js/content.js`](../../../../extension/js/content.js#L978).
