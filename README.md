@@ -4,7 +4,7 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 
 ## First-time setup
 
-1. Install [Bridle from the Chrome Web Store](https://chromewebstore.google.com/detail/bridle-%E2%80%93-send-requests-to/pmjglidnlipdecmncbjfjoooeodjofnp) in the Chrome profile you want the assistant to use.
+1. Follow the [Bridle setup guide](https://bridle.io/setup) to install Bridle in the Chrome profile you want the assistant to use.
 2. Visit [bridle.io](https://bridle.io/). Sign up or sign in if you want account-backed features or Bridle asks you to. Some basic feedback capture works without an account, subject to current limits. Complete sign-up yourself; an assistant should not handle account credentials.
 3. Enable the assistant's browser control for that same Chrome profile and allow access to your website.
 4. If you want the assistant to implement feedback, open the website's code repository in the coding assistant. Clients can use Bridle to capture and review feedback without a code repository.
@@ -13,7 +13,9 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 
 In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`.
+> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle’s short first-time setup guide and ask me to complete `https://bridle.io/setup`. Do not show the direct Chrome Web Store URL unless I ask for it.
+
+The installed skill repeats this guide on the first Bridle-related turn unless setup is already confirmed or you provide a Bridle Copy AI prompt. A first-time guide covers installing through Bridle's setup page, enabling assistant access to the same Chrome profile, making one capture, and checking its feedback ID before implementation.
 
 Codex installs the skill and its reference guides into your user skills folder. It is available on the following turn; start a new chat if you want a clean conversation.
 
