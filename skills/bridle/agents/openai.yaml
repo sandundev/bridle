@@ -1,7 +1,7 @@
 interface:
   display_name: "Bridle"
   short_description: "Handle Bridle feedback and ticket workflows"
-  default_prompt: "Use $bridle. On my first Bridle interaction, give me a brief setup guide with https://bridle.io/setup and copy-ready quoted examples for capture, review, and implementation. Do not show the direct Chrome Web Store URL unless I ask. Then help with Bridle feedback."
+  default_prompt: "Use $bridle. On my first Bridle interaction, give me a brief setup guide with https://bridle.io/setup and copy-ready quoted examples for capture, review, and implementation. Then help with Bridle feedback."
 
 policy:
   allow_implicit_invocation: true

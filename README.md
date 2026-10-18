@@ -13,7 +13,7 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 
 In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle’s short first-time setup guide and ask me to complete `https://bridle.io/setup`. Do not show the direct Chrome Web Store URL unless I ask for it.
+> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle’s short first-time setup guide and ask me to complete `https://bridle.io/setup`.
 
 The installed skill repeats this guide on the first Bridle-related turn unless setup is already confirmed or you provide a Bridle Copy AI prompt. It also gives copy-ready examples for capturing feedback, reviewing saved items, and capturing before implementation, so a new user has a concrete first command to try.
 
