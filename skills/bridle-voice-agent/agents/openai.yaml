@@ -1,7 +1,0 @@
-interface:
-  display_name: "Bridle Assistant"
-  short_description: "Handle Bridle feedback and ticket workflows"
-  default_prompt: "Use $bridle-voice-agent to add visual feedback to the current page."
-
-policy:
-  allow_implicit_invocation: true

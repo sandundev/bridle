@@ -1,0 +1,7 @@
+interface:
+  display_name: "Bridle"
+  short_description: "Handle Bridle feedback and ticket workflows"
+  default_prompt: "Use $bridle to capture or review website feedback with Bridle."
+
+policy:
+  allow_implicit_invocation: true

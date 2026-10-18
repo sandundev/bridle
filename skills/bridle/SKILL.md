@@ -1,9 +1,9 @@
 ---
-name: bridle-voice-agent
-description: Use the Bridle browser extension to capture or edit visual feedback (Bug, Change request, Question, Feature, Task, Spike), review completed feedback, inspect a replay, capture diagnostics, create/link tickets, or read Bridle's local AI connector folder and fix feedback in a repository. Trigger when the user asks to use Bridle, including by voice or text. If Bridle is not set up, guide first-time installation and browser access. Dictation may mishear Bridle as “Biddle”, “Brittle” or “Bridal”.
+name: bridle
+description: Use the Bridle browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Trigger when the user asks to use Bridle by voice or text; guide setup if the extension or browser access is missing.
 ---
 
-# Bridle assistant
+# Bridle
 
 Use this skill when the user asks you to perform Bridle work in a browser. It teaches the workflow; it does not grant browser-control permissions, install the extension, or connect the agent to the user's Chrome profile. Use the browser/computer-use tool actually available in this session. If it cannot control the browser where Bridle is installed, explain that limitation and stop rather than simulating success.
 

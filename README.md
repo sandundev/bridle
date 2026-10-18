@@ -1,6 +1,6 @@
-# Bridle Assistant
+# Bridle
 
-The Bridle Assistant is a reusable skill for working with the **Bridle Chrome extension** through an AI assistant. It works with typed or spoken requests. The skill guides feedback capture, review, handoff, implementation and verification; it does not install Bridle or grant browser or filesystem access.
+Bridle is a reusable skill for working with the **Bridle Chrome extension** through Codex or another AI assistant. It supports typed or spoken requests and guides feedback capture, review, handoff, implementation and verification. The skill does not install Bridle or grant browser or filesystem access.
 
 ## First-time setup
 
@@ -13,7 +13,7 @@ The Bridle Assistant is a reusable skill for working with the **Bridle Chrome ex
 
 In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle Assistant skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle-voice-agent`.
+> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`.
 
 Codex installs the skill and its reference guides into your user skills folder. It is available on the following turn; start a new chat if you want a clean conversation.
 
@@ -21,14 +21,14 @@ Codex installs the skill and its reference guides into your user skills folder. 
 
 In the new chat, try:
 
-> Use `$bridle-voice-agent`. In my connected Chrome tab, use Bridle to capture the broken avatar as a Bug. Confirm the saved REQ ID before editing code, then fix it in this repository and report how you verified it.
+> Use `$bridle`. In my connected Chrome tab, use Bridle to capture the broken avatar as a Bug. Confirm the saved REQ ID before editing code, then fix it in this repository and report how you verified it.
 
 For Bridle tasks, the skill requires saving and verifying feedback before implementation, unless you explicitly ask the assistant to work outside Bridle. Existing Bridle feedback is reused by its REQ ID rather than captured twice.
 
 ## Package contents
 
 - `plugin.json` — portable skills-only plugin manifest
-- `skills/bridle-voice-agent/SKILL.md` — the workflow and first-time setup guidance
-- `skills/bridle-voice-agent/references/` — detailed feedback, completion, connector, replay and ticket guides
+- `skills/bridle/SKILL.md` — the workflow and first-time setup guidance
+- `skills/bridle/references/` — detailed feedback, completion, connector, replay and ticket guides
 
 The public GitHub repository is the distribution source for the skill. OpenAI directory review and publication are separate steps. No Bridle MCP or model API is included.
