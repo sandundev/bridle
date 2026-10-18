@@ -91,4 +91,15 @@ The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nea
 
 ## Annotation colours
 
-Draft text, saved notes and their connecting ink use the same feedback-type colour: Change pink-red, Bug red, Feature purple, Task teal, Spike slate-blue and Comment amber. Changing the draft type updates its colour immediately. Completed feedback remains green with a tick. Comment includes questions, praise and general observations; there is no separate Question type. Use the type label as well as colour when verifying a save.
+Use this palette consistently across the extension and board UI:
+
+| Type | Accent for icons/arrows | Text | Type chip fill | Type chip border |
+|---|---|---|---|---|
+| Change | `#F15B50` | `#DC493F` | `#FFF0EE` | `#FFC9C3` |
+| Bug | `#DC2626` | `#C91F32` | `#FDEBED` | `#F7B9C0` |
+| Feature | `#8B3DFF` | `#7C3AED` | `#F3EAFE` | `#DFC7FF` |
+| Task | `#0D9B8A` | `#087F73` | `#E4F8F3` | `#B6E9DE` |
+| Spike | `#2563EB` | `#1D4ED8` | `#EAF1FF` | `#BFD3FF` |
+| Comment | `#FFA500` | `#BD7300` | `#FFF3DD` | `#FFDF9C` |
+
+Draft and saved on-page notes keep a pure white background, with type-coloured text, accent arrows and a thin type-coloured border. Type controls use the tinted fill and border above. Completed notes and arrows turn green with a tick. Comment includes questions, praise and general observations; there is no separate Question type. Use the type label as well as colour when verifying a save.
