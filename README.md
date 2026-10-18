@@ -33,7 +33,7 @@ In the new chat, try:
 
 For Bridle tasks, the skill requires saving and verifying feedback before implementation, unless you explicitly ask the assistant to work outside Bridle. Existing Bridle feedback is reused by its REQ ID rather than captured twice.
 
-In extension builds with quiet capture, the skill Shift+clicks Bridle's existing picker button, selects the page element, writes directly in the red annotation and saves with Cmd/Ctrl+Enter. There is no draft card, mode banner or exit button. A regular picker click returns to the normal form; Escape, navigation/reload and five minutes without activity also end the temporary session. Older installed extensions use the normal capture form; this skill does not upgrade the browser extension.
+For AI capture, the skill must first reveal Bridle with **Command+Shift+9 (Mac)** or **Ctrl+Shift+9 (others)**. Then it holds **Command+Shift / Ctrl+Shift** while clicking the picker, releases modifiers and selects the target. Typing, appending and saving status stay in the same red note; save with Command/Ctrl+Enter. Repeat the sequence for each feedback. Normal Add Feedback capture is not an automatic fallback: missing bars require recovery checks; older builds require updating. A regular picker click remains the human path to the standard form. The skill does not update the installed extension itself.
 
 ## Package contents
 

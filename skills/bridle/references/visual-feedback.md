@@ -4,15 +4,27 @@ This is the operational reference for Bridle's current extension UI.
 
 **Work from screenshots.** Bridle draws its bar, dialogs and panels in its own layer outside the page's `<body>`. Claude in Chrome's page reading (`read_page`, `find`) did not list any of it on 17 October 2026: the bar and an open Feedbacks panel were on screen but not in the tree. A probe page showed why: that reader lists only ordinary elements inside `<body>`, and skips anything inside a shadow root (even inside `<body>`) and anything outside `<body>`. Bridle uses both on purpose (they keep it above page dialogs and safe from the page's styles). Take a fresh screenshot after every step and click by its coordinates; never reuse coordinates from an earlier screenshot or another site (the bar moves with the window size). Other browser tools may see the controls by name (the names below are real accessible names); use them when your tool does.
 
-## Quiet AI-assisted capture (when available)
+## Mandatory AI assistant capture sequence
 
-The extension cannot identify an AI agent from ordinary browser clicks. In builds with quiet capture, the agent signals its intent by **Shift+clicking** Bridle's **Pick any element to add feedback** button. After selecting the target, the feedback input appears as a red note on the page; there is no draft card, mode banner or exit button. Choose the type from the small type label, enter the request and save with **Cmd+Enter** on macOS or **Ctrl+Enter** elsewhere. Shift+click again for each additional feedback.
+For every AI-driven new-feedback capture, follow this sequence. Do not substitute an ordinary click, Shift-only click, native right-click, or normal Add Feedback form unless the user explicitly requests normal/manual capture.
 
-A regular click on the picker switches to normal capture for a person taking over. **Escape**, page navigation, reload or five minutes without capture activity also ends the temporary session. If Shift+click does not produce the red note in the installed build, use the standard form steps below.
+| Action | macOS | Windows / Linux / ChromeOS |
+|---|---|---|
+| Reveal Bridle on the active page | Command+Shift+9 | Ctrl+Shift+9 |
+| Enter AI capture | Hold Command+Shift and click **Pick any element to add feedback** | Hold Ctrl+Shift and click **Pick any element to add feedback** |
+| Save the red note | Command+Enter | Ctrl+Enter |
 
-After choosing the target, use the red on-page note as the real feedback input. Choose **Feedback type** from its small type label, enter the user's request, and save with Cmd/Ctrl+Enter. Confirm the red draft becomes a saved Bridle annotation and marker; if the result is unclear, inspect the feedback list before retrying. Each record still uses the ordinary Bridle storage and evidence path. Auth/quota/error dialogs remain available, and existing feedback edits still use the normal edit form.
+The `9` is pressed only for the reveal command. For the picker click hold the same **modifiers**, without `9`. The shortcut is a workflow signal, not proof of agent identity or a security boundary.
 
-After saving, verify that the red note becomes a saved Bridle annotation with its marker. If the user takes over, use an ordinary picker click to return to the full form. Do not use trusted mouse events as evidence that a human took control: assistant browser clicks can also be trusted.
+1. Focus the requested browser tab and send the reveal shortcut before looking for the bar. It reveals hidden/dismissed controls for this document without changing permanent site settings. Repeating it leaves an already-visible bar in place; it does not toggle it off or open a form. The browser command can reinject a missing or invalidated content script where extension injection is allowed.
+2. Inspect a fresh screenshot. Hold the platform modifiers above and click Bridle's picker. Do this for **each** capture, including after reload/navigation. Release the modifiers before picking the target element.
+3. Verify the picker highlights the intended element, then select it. The input must appear as the red annotation itself, with a small type label. There must be no Add Feedback / Draft Feedback card or mode banner. If the normal form opens, stop this capture, retry the correct gesture, and do not fill the normal form as a fallback.
+4. Select **Feedback type**, type the request into **Feedback text**, and append any further wording to that same input. Never create a second draft for additions to the current request. Save with the platform shortcut. Typing and saving status stay in the red note container. Other quota/auth/error and existing-feedback edit dialogs remain available.
+5. Verify the draft becomes a saved annotation/marker and obtain the REQ ID from its tooltip or Bridle feedback list. If unclear, inspect saved state before retrying; avoid duplicates. Repeat the reveal and modified picker sequence for the next requested feedback.
+
+If the bar is absent after the shortcut, focus the page and retry once, then reload and send the shortcut again. Check whether Bridle is installed/enabled in the controlled profile, allowed on this site, and whether the shortcut is assigned in `chrome://extensions/shortcuts`. Browser pages, extension-store pages, missing site access, disabled extensions and some browser-control transports can prevent the shortcut or injection. Report the **specific blocker and recovery attempts**, rather than simply saying the bar is missing. Never silently switch to normal capture or edit code without the Bridle audit record. Older extension builds must be updated for this workflow; request that update if the shortcut/gesture is unavailable.
+
+A normal unmodified picker click is the human takeover path and returns to the ordinary form. Escape, navigation, reload, or five minutes without capture activity ends the temporary assistant state. Do not infer who is clicking from `isTrusted`.
 
 ## Add a new item in normal mode
 
