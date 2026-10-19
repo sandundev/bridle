@@ -27,7 +27,7 @@ Assistants load skills when a chat starts, so these lines ask the assistant to r
 
 ## How the assistant works with Bridle
 
-- **Spoken requests.** Speech-to-text often writes Bridle as “Bridal” or “Brittle”; the skill reads those as Bridle, including in page names and addresses (“Bridal Times” is Bridle Times). To fix it at the source, add **Bridle** to your dictation tool's dictionary (in Wispr Flow: its Dictionary).
+- **Spoken requests.** Speech-to-text often writes Bridle as “Bridal” or “Brittle”; the skill reads those as Bridle, including in page names and addresses. To fix it at the source, add **Bridle** to your dictation tool's dictionary (in Wispr Flow: its Dictionary).
 - **The right browser.** Bridle lives in your own Chrome, so the assistant needs a tool that controls that Chrome (Claude in Chrome, Codex's Chrome connection). It checks first that Bridle's bar shows on the page; a browser built into the assistant's own app does not have Bridle.
 - **Capturing.** It reveals the Bridle bar with **Command+Shift+9** (Mac) or **Ctrl+Shift+9**, holds **Command+Shift** / **Ctrl+Shift** while clicking Bridle's picker and picks the element. A small handwritten note opens beside it: the type, **Save**, the text, and the element it is on, with **↑ Parent** and **↓ Back** to move to the right element without leaving the note. It saves straight away, since your request to add feedback is the permission to save, and reads back each REQ ID once.
 - **Several matching elements.** If you say “the buttons” and there are three, it tells you so and asks once: three separate feedbacks, or one feedback on all three.
