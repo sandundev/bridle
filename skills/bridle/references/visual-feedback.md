@@ -2,7 +2,7 @@
 
 This is the operational reference for Bridle's current extension UI.
 
-**Work from screenshots.** Bridle draws its bar, dialogs and panels in its own layer outside the page's `<body>`. Claude in Chrome's page reading (`read_page`, `find`) did not list any of it on 17 October 2026: the bar and an open Feedbacks panel were on screen but not in the tree. A probe page showed why: that reader lists only ordinary elements inside `<body>`, and skips anything inside a shadow root (even inside `<body>`) and anything outside `<body>`. Bridle uses both on purpose (they keep it above page dialogs and safe from the page's styles). Take a fresh screenshot after every step and click by its coordinates; never reuse coordinates from an earlier screenshot or another site (the bar moves with the window size). Other browser tools may see the controls by name (the names below are real accessible names); use them when your tool does.
+**Bridle's own controls are seen, not read.** Bridle draws its bar, notes and panels in a layer of its own (outside the page's `<body>`, in a shadow root) so that page dialogs and styles cannot get in its way. Some page-reading tools do not list anything there (Claude in Chrome's `read_page` and `find` do not), so look at the screen to find Bridle's controls and press them where you see them, and look again after each step, because they move. If your tool does list them, use their names (the names below are the real accessible names). Page elements themselves you can find however your tool works best.
 
 ## Capturing feedback as an assistant
 
@@ -16,7 +16,7 @@ Use this for every new feedback you capture. Everything happens in one small not
 
 The `9` is only for revealing the bar. For the picker click hold the same modifiers without `9`, and release them before you pick the element.
 
-1. **Reveal and start.** Send the reveal shortcut and take a fresh screenshot: the Bridle bar is at the bottom right. Hold the modifiers and click its picker. Do this for each feedback, including after a reload or navigation.
+1. **Reveal and start.** Send the reveal shortcut and look at the page: the Bridle bar is at the bottom right. Hold the modifiers and click its picker. Do this for each feedback, including after a reload or navigation.
 2. **Pick.** Move over the element the user means until the highlight outlines it, and click near the middle of its visible text or content.
 3. **The note.** A small handwritten note appears next to the element:
 
@@ -31,7 +31,7 @@ The `9` is only for revealing the bar. For the picker click hold the same modifi
    | **Repick** | Picks again (your text and type are kept). |
    | **×** | Cancels the draft. |
 
-4. **Check what it is on, and correct it here.** Read the selected line. It should name the element the user meant, with its text. If it names something smaller inside it (part of an icon or a drawing, one word of a link, an inner `span`), press **↑ Parent** until it names the right element; if you went one step too far, press **↓ Back**. If Parent reaches the whole section or page without passing the element, press **Repick** and pick nearer the middle of the element. The note hides for a moment after Parent or Back while Bridle takes the element's screenshot; take your own screenshot after that.
+4. **Check what it is on, and correct it here.** Read the selected line. It should name the element the user meant, with its text. If it names something smaller inside it (part of an icon or a drawing, one word of a link, an inner `span`), press **↑ Parent** until it names the right element; if you went one step too far, press **↓ Back**. If Parent reaches the whole section or page without passing the element, press **Repick** and pick nearer the middle of the element. The note hides for a moment after Parent or Back while Bridle photographs the element; look again after that.
 5. **Write and save.** Set the type, type the request into **Feedback text** (append further wording to the same text; never start a second draft for additions), then press **Save** at once. The user's request to add the feedback is their permission to save it: do not stop to ask “shall I save?”, because a draft left open is lost when the page changes. Ask first only if the target, type or wording is genuinely unclear. If your own browser tool insists on confirming before it presses anything on a page, say so once, plainly, and suggest the user add “and save it” to the request or allow this site in that tool's settings.
 6. **Read the receipt.** A toast at the bottom of the page says **Saved REQ-… · Type: text** for about eight seconds (with “screenshot pending” when the tab was not in front), and the note becomes a saved note and marker. If you missed it, find the REQ ID in the Feedbacks list before retrying, so you never save twice.
 

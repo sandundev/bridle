@@ -18,7 +18,7 @@ Bridle is an extension in the **user's own Chrome**. Only a tool that controls t
 Before anything else in a Bridle task:
 
 1. Open or focus the page **in that Chrome**.
-2. Press the reveal shortcut (**Command+Shift+9** on macOS, **Ctrl+Shift+9** elsewhere) and take a fresh screenshot.
+2. Press the reveal shortcut (**Command+Shift+9** on macOS, **Ctrl+Shift+9** elsewhere) and look at the page.
 3. Bridle's bar is at the bottom right: carry on. No bar: you may be in the wrong browser, or Bridle is missing, turned off or not allowed on this site. Check which it is (see [visual feedback](references/visual-feedback.md)) and tell the user the specific reason. Do not guess addresses or start picking elements before the bar is there.
 
 ## Installed during this conversation
@@ -90,7 +90,7 @@ These come from real sessions in which an assistant drove Bridle in the user's C
 8. **IDs are per install, across all sites.** “The latest feedback” means the newest on the page or site the user means, not the highest number overall.
 9. **Reveal the bar first.** Always send the platform reveal shortcut before looking for the bar. If absent, follow the recovery sequence in the visual reference, including checking shortcut assignment, profile/site access and restricted pages. Do not report only “bar not found” or silently fall back to normal capture.
 10. **Destructive actions need the user's own words.** Delete, remove, reset and turn-off actions only when the user named that action for those items. Deleting a feedback is permanent (there is no recently-deleted list), so stop at the delete confirmation and let the user press it; hiding a marker is reversible and you may do it on request.
-11. **Use screenshots for Bridle's controls.** Bridle's UI is not in the page tree that some browser tools read (Claude in Chrome's `read_page` / `find` do not list it). Look at a fresh screenshot and click by coordinates; take a new one after each step.
+11. **Bridle's controls are seen, not read.** Bridle's bar, note and panels are not in the page tree some tools read (Claude in Chrome's `read_page` / `find` do not list them), so “no bar in the page tree” does not mean Bridle is missing. Look at the screen to find and press them, and look again after each step. Page elements can be found however your tool works best.
 12. **Screenshots need the tab in front.** Chrome lets Bridle capture only the visible tab of a window. If the tab you work in is behind another tab, the receipt reads **Feedback saved · screenshot pending**: Bridle takes the screenshot when that tab is shown with the element on screen. Tell the user when this happens. A PDF exported meanwhile says “Screenshot unavailable”.
 13. **Check a fix on a fresh page.** After changing a site's files, reload without the cache before judging the result; a normal reload can show the old page.
 14. **Leave Bridle's own questions to the user.** “How did that go?” and “Debugging something tricky?” ask about the user's experience or store a preference; do not answer them. If one covers what you need, say so.
