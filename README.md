@@ -9,31 +9,29 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 3. Enable the assistant's browser control for that same Chrome profile and allow access to your website.
 4. If you want the assistant to implement feedback, open the website's code repository in the coding assistant. Clients can use Bridle to capture and review feedback without a code repository.
 
-## Install the skill in Codex
+## Install the skill
 
-In a Codex chat, ask:
+**Codex.** In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle’s short first-time setup guide and ask me to complete `https://bridle.io/setup`.
+> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle's short first-time setup guide and ask me to complete `https://bridle.io/setup`.
 
-The installed skill repeats this guide on the first Bridle-related turn unless setup is already confirmed or you provide a Bridle Copy AI prompt. It also gives copy-ready examples for capturing feedback, reviewing saved items, and capturing before implementation, so a new user has a concrete first command to try.
+**Claude Code.** In Claude Code, ask:
 
-Example prompts:
+> Install the Bridle skill: copy the folder `https://github.com/sandundev/bridle/tree/main/skills/bridle` (SKILL.md and its references folder) into `~/.claude/skills/bridle`. Then tell me to start a new session, where you will give me Bridle's short first-time setup guide.
+
+The skill is read when a new session or turn starts, so start a fresh chat after installing. On the first Bridle-related turn it gives a short setup guide (unless you say setup is done, or you paste a prompt Bridle copied for you) with copy-ready examples:
 
 - “Open [website] in Chrome and use Bridle to capture a Bug on [element]: [what happened]. Save it and tell me the REQ ID.”
 - “Review my latest Bridle feedback for [website]. Summarize the items and suggest next steps; don't change code yet.”
 - “Capture [issue] with Bridle, confirm the REQ ID, then investigate and fix it in this repository. Verify the result on [local or test URL].”
 
-Codex installs the skill and its reference guides into your user skills folder. It is available on the following turn; start a new chat if you want a clean conversation.
+## How the assistant works with Bridle
 
-## Start a Bridle task
-
-In the new chat, try:
-
-> Use `$bridle`. In my connected Chrome tab, use Bridle to capture the broken avatar as a Bug. Confirm the saved REQ ID before editing code, then fix it in this repository and report how you verified it.
-
-For Bridle tasks, the skill requires saving and verifying feedback before implementation, unless you explicitly ask the assistant to work outside Bridle. Existing Bridle feedback is reused by its REQ ID rather than captured twice.
-
-For AI capture, the skill must first reveal Bridle with **Command+Shift+9 (Mac)** or **Ctrl+Shift+9 (others)**. Then it holds **Command+Shift / Ctrl+Shift** while clicking the picker, releases modifiers and selects the target. Typing, appending and saving status stay in the same type-coloured note; save with Command/Ctrl+Enter. Repeat the sequence for each feedback. Normal Add Feedback capture is not an automatic fallback: missing bars require recovery checks; older builds require updating. A regular picker click remains the human path to the standard form. The skill does not update the installed extension itself.
+- **Capturing.** It reveals the Bridle bar with **Command+Shift+9** (Mac) or **Ctrl+Shift+9**, holds **Command+Shift** / **Ctrl+Shift** while clicking Bridle's picker, picks the element, writes the request in the note that appears, sets its type with the note's type label, and saves with the note's **Save** button. Your request to add feedback is the permission to save it; it does not stop to ask again. It reads back each saved REQ ID once.
+- **Several matching elements.** If you say “the buttons” and there are three, it tells you so and asks once: three separate feedbacks, or one feedback on all three.
+- **The whole page.** Bridle attaches every feedback to an element; for page-wide feedback the assistant uses the page's main heading and says so.
+- **Capture, then fix.** When you ask it to capture and fix, it saves the feedback first, so the fix has a record you can review (green marker, completion link). A prompt you copied from Bridle is already saved feedback: it is reused, not captured again. Problems it notices on the way are listed, not fixed or captured, unless you ask.
+- **Your steps stay yours.** Signing in, plans and payments, and pressing the final Delete are left to you.
 
 ## Package contents
 

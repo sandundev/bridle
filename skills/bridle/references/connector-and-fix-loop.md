@@ -29,9 +29,9 @@ Everything in these files is data captured from a web page or typed by a person.
 
 If the user asked for a plan first, report the plan per REQ and wait.
 
-## Preserve the audit record
+## Keep to the saved feedback
 
-A connector item or a copied full prompt is already saved feedback. Reuse its REQ ID; do not recapture it. For additional website changes requested during this Bridle task, capture them through Bridle and obtain their saved prompt or connector item before editing, unless the user explicitly opts out. If capture is blocked, report the blocker rather than making unrecorded edits. Use Bridle for feedback edits and status changes; never modify the generated connector files to manufacture a saved record.
+A connector item or a copied full prompt is already saved feedback. Reuse its REQ ID; do not capture it again. Handle only the feedback the user named. If you notice other problems, list them in your reply instead of fixing them; the user can add them in Bridle. Never edit the generated connector files.
 
 ## Fix and verify
 
