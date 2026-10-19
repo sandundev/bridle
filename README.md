@@ -13,13 +13,13 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 
 **Codex.** In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. After installation, tell me it is available on my next turn, then give me Bridle's short first-time setup guide and ask me to complete `https://bridle.io/setup`.
+> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
 
 **Claude Code.** In Claude Code, ask:
 
-> Install the Bridle skill: copy the folder `https://github.com/sandundev/bridle/tree/main/skills/bridle` (SKILL.md and its references folder) into `~/.claude/skills/bridle`. Then tell me to start a new session, where you will give me Bridle's short first-time setup guide.
+> Install the Bridle skill: copy the folder `https://github.com/sandundev/bridle/tree/main/skills/bridle` (SKILL.md and its references folder) into `~/.claude/skills/bridle`. Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
 
-The skill is read when a new session or turn starts, so start a fresh chat after installing. On the first Bridle-related turn it gives a short setup guide (unless you say setup is done, or you paste a prompt Bridle copied for you) with copy-ready examples:
+Assistants load skills when a chat starts, so these lines ask the assistant to read the installed skill straight away and use it in the same chat; new chats load it by themselves. On the first Bridle-related turn it gives a short setup guide (unless you say setup is done, or you paste a prompt Bridle copied for you) with copy-ready examples:
 
 - “Open [website] in Chrome and use Bridle to capture a Bug on [element]: [what happened]. Save it and tell me the REQ ID.”
 - “Review my latest Bridle feedback for [website]. Summarize the items and suggest next steps; don't change code yet.”
@@ -27,6 +27,7 @@ The skill is read when a new session or turn starts, so start a fresh chat after
 
 ## How the assistant works with Bridle
 
+- **The right browser.** Bridle lives in your own Chrome, so the assistant needs a tool that controls that Chrome (Claude in Chrome, Codex's Chrome connection). It checks first that Bridle's bar shows on the page; a browser built into the assistant's own app does not have Bridle.
 - **Capturing.** It reveals the Bridle bar with **Command+Shift+9** (Mac) or **Ctrl+Shift+9**, holds **Command+Shift** / **Ctrl+Shift** while clicking Bridle's picker, picks the element, writes the request in the note that appears, sets its type with the note's type label, and saves with the note's **Save** button. Your request to add feedback is the permission to save it; it does not stop to ask again. It reads back each saved REQ ID once.
 - **Several matching elements.** If you say “the buttons” and there are three, it tells you so and asks once: three separate feedbacks, or one feedback on all three.
 - **The whole page.** Bridle attaches every feedback to an element; for page-wide feedback the assistant uses the page's main heading and says so.
