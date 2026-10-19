@@ -1,11 +1,15 @@
 ---
 name: bridle
-description: Use the Bridle browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Trigger when the user asks to use Bridle by voice or text; guide setup if the extension or browser access is missing.
+description: Use the Bridle browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Trigger when the user asks to use Bridle by voice or text, including when speech-to-text writes it as "Bridal", "Brittle", "Biddle" or "Bridel" (for example "use bridal to add feedback", "the bridal times page"); guide setup if the extension or browser access is missing.
 ---
 
 # Bridle
 
 Use this skill when the user asks you to perform Bridle work in a browser, asks what Bridle can do, or is getting started with Bridle. It teaches the workflow; it does not grant browser-control permissions, install the extension, or connect the agent to the user's Chrome profile.
+
+## The name: Bridle, however it was dictated
+
+Users often speak to you, and speech-to-text rarely spells Bridle right. **“Bridal”, “Brittle”, “Biddle”, “Bridel”, “Bridles”** and the like mean **Bridle**, everywhere: in the request (“use bridal to add a bug”), in names (“Bridal Times” is the **Bridle Times** page) and in addresses (“bridal-times” is `bridle-times`). Read them as Bridle straight away. Do not ask which was meant, do not search for a wedding site, and do not correct the user. The same goes for Bridle's words: “marker”, “picker” and “REQ” are often misheard too (“rec”, “wreck”, “req oh oh four” is REQ-004).
 
 ## First: the right browser, and Bridle's bar
 
@@ -80,7 +84,7 @@ These come from real sessions in which an assistant drove Bridle in the user's C
 3. **Gates are the user's step.** If Bridle shows **Sign up to continue**, **Subscribe to continue** or **Share limit reached**, stop. Do not press the account, plan or payment button, and do not sign in. Tell the user the gate, keep their request so it can be repeated, and continue only after they say it is handled. **Maybe later** or × only closes the dialog; the feedback was not saved. Anonymous installs can save only a few feedbacks a day, so a batch may stop part-way: report which items were saved.
 4. **Keep the user's words and save without a second approval.** If the user says “just say X”, save exactly X. Otherwise turn clear shorthand into a concise request from what was said and what is on screen (“call this Profile” on the label “For you” → “Change ‘For you’ to ‘Profile’”). Do not read back the draft or ask whether to save; save it and report what Bridle confirmed. Ask a brief question only when the target or requested outcome is materially ambiguous. Never invent replacement text, cause, severity or acceptance criteria.
 5. **Choose the type on purpose.** The dialog defaults to **Change**. Pick **Bug**, **Comment**, **Feature**, **Task** or **Spike** when the words say so, and report which type you used. Use Comment for questions, observations and general feedback; do not infer a code-change request from a Comment alone. Change, Bug and Comment note text is red; other note colors follow their type. Completed notes are green.
-6. **Names from dictation.** Dictation mishears names. “Biddle”, “Brittle” and “Bridal” mean Bridle, in addresses too (“bridal times” is `bridle-times`). When a dictated name or phrase is meant to match text on the page and does not (for example a misspelt person's name in a headline), use the page's text and say so.
+6. **Names from dictation.** Dictation mishears names; Bridle's own name is covered [above](#the-name-bridle-however-it-was-dictated). When a dictated name or phrase is meant to match text on the page and does not (for example a misspelt person's name in a headline), use the page's text and say so.
    - **Spoken addresses.** “forward slash” is `/`, “hyphen” or “dash” is `-`, “dot” is `.`; a trailing “website”, “page” or “site” usually describes the address, it is not part of it (“bridle.io forward slash bridle hyphen times website” is `bridle.io/bridle-times`). If the address you built does not exist, find the page before asking: look at the site's navigation or its `/sitemap.xml` for the closest match, then open it or offer the one or two candidates you found. Ask for the address only when nothing on the site matches.
 7. **Read the receipt.** After Cmd/Ctrl+Enter in assistant capture, a dark toast at the bottom of the page reads **Saved REQ-… · Type: text** for a few seconds, and the draft becomes a saved note and marker; take the screenshot right after saving. If you missed it, find the feedback in the Feedbacks list before retrying. In normal mode, after **Add**, the “What's next?” panel shows **Feedback saved** with the feedback ID (REQ-…) and its text. Report the ID, type and text. Never guess an ID or risk a duplicate save.
 8. **IDs are per install, across all sites.** “The latest feedback” means the newest on the page or site the user means, not the highest number overall.

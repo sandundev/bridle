@@ -1,6 +1,6 @@
 interface:
   display_name: "Bridle"
-  short_description: "Handle Bridle feedback and ticket workflows"
+  short_description: "Handle Bridle feedback and ticket workflows (often dictated as Bridal)"
   default_prompt: "Use $bridle. On my first Bridle interaction, give me a brief setup guide with https://bridle.io/setup and copy-ready quoted examples for capture, review, and implementation. Then help with Bridle feedback."
 
 policy:
