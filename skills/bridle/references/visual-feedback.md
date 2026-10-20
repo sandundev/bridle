@@ -115,13 +115,13 @@ The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nea
 
 Use this palette consistently across the extension and board UI:
 
-| Type | Annotation arrow | Annotation text | Annotation background | Annotation border |
-|---|---|---|---|---|
-| Change | `#F15B50` | `#DC493F` | `#FFF0EE` | `#FFC9C3` |
-| Bug | `#DC2626` | `#DC493F` | `#FDEBED` | `#F7B9C0` |
-| Feature | `#8B3DFF` | `#7C3AED` | `#F3EAFE` | `#DFC7FF` |
-| Task | `#0D9B8A` | `#087F73` | `#E4F8F3` | `#B6E9DE` |
-| Spike | `#2563EB` | `#1D4ED8` | `#EAF1FF` | `#BFD3FF` |
-| Comment | `#FFA500` | `#DC493F` | `#FFF3DD` | `#FFDF9C` |
+| Type | Note text and arrow | Note border |
+|---|---|---|
+| Change | red `#DC2626` | `#FECACA` |
+| Bug | red `#DC2626` | `#FECACA` |
+| Feature | `#8B3DFF` | `#DFC7FF` |
+| Task | `#0D9B8A` | `#B6E9DE` |
+| Spike | `#2563EB` | `#BFD3FF` |
+| Comment | `#FFA500` | `#FFDF9C` |
 
-Draft and saved on-page notes keep a pure white background. Change, Bug and Comment use red text (`#DC493F`); their arrows and borders keep their own type accents. Feature, Task and Spike use the text, arrow and border colours in the table. In the feedback type selector, the selected type has a solid accent fill with white text and icon; unselected types stay white with a type-coloured icon and dark text. Change is blue (`#2563EB`) in the selector, while its annotation stays coral red. Note text uses the locally bundled Kalam font, including the text as it is typed during assistant capture. The font is distributed under SIL OFL 1.1; the license is at `extension/fonts/OFL.txt`. Completed notes and arrows turn green with a tick. Comment includes questions, praise and general observations; there is no separate Question type. Use the type label as well as colour when verifying a save.
+Notes, saved or being written, are white with the type's colour from the type row for their text and arrow; Change and Bug are both red (Change is blue only in the type row). Completed notes and arrows turn green with a tick. Comment includes questions, praise and general observations; there is no separate Question type. Use the type label as well as colour when verifying a save.
