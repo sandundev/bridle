@@ -1,9 +1,9 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bridle",
-  "version": "0.9.3",
+  "version": "0.10.0",
   "license": "SEE LICENSE IN LICENSE",
-  "description": "Capture website feedback in Bridle before implementation, preserve REQ audit references, and guide review, diagnostics and handoff.",
+  "description": "Capture every requested website change as Bridle feedback before implementing it, implement from Bridle’s prompt for that feedback, and guide review, diagnostics and handoff.",
   "author": {
     "name": "Bridle"
   },
