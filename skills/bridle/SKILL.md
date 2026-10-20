@@ -1,6 +1,6 @@
 ---
 name: bridle
-description: Use the Bridle browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Before anything else, press Command+Shift+9 (Ctrl+Shift+9 on Windows/Linux) in the user's Chrome to show Bridle's bar at the bottom right; capture every feedback by holding Command+Shift (Ctrl+Shift) while clicking the bar's picker. Trigger when the user asks to use Bridle by voice or text, including when speech-to-text writes it as "Bridal", "Brittle", "Biddle" or "Bridel" (for example "use bridal to add feedback"); guide setup if the extension or browser access is missing.
+description: Use the Bridle browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Before anything else, work in the user's own Chrome where Bridle is installed (never a browser built into your app) and press Command+Shift+9 (Ctrl+Shift+9 on Windows/Linux) to show Bridle's bar at the bottom right; capture every feedback by holding Command+Shift (Ctrl+Shift) while clicking the bar's picker. Trigger when the user asks to use Bridle by voice or text, including when speech-to-text writes it as "Bridal", "Brittle", "Biddle" or "Bridel" (for example "use bridal to add feedback"); guide setup if the extension or browser access is missing.
 ---
 
 # Bridle
@@ -13,11 +13,13 @@ Users often speak to you, and speech-to-text rarely spells Bridle right. **“Br
 
 ## First: the right browser, and Bridle's bar
 
-Bridle is an extension in the **user's own Chrome**. Only a tool that controls that Chrome can use it: Claude in Chrome, Codex's Chrome connection, or a similar tool attached to the user's Chrome profile. A browser built into your own app (a preview or browser pane, a headless or test browser) does not have Bridle, even when it can open the same address. When you have more than one browser tool, use the one that controls the user's Chrome; if you have none, say so and stop, rather than doing the work somewhere Bridle cannot see it.
+Bridle is an extension in the **user's own Chrome**, and only there. Always work in that Chrome, through the tool that controls it: Claude in Chrome, Codex's Chrome connection, or a similar tool attached to the user's Chrome profile. **Never use a browser built into your own app** (the Claude or Codex app's browser pane, an in-app or preview browser, a headless or test browser): Bridle is never installed there, even when it opens the same address, so do not open the page there and do not report that Bridle is missing because it is not there. If you have no tool that controls the user's Chrome, say so and stop.
+
+**The page is often already open.** Users usually say something like “I want to add some feedback on the website I'm working on; I have it open in the browser.” Then list the tabs of the user's Chrome, pick the one with the site they mean (the one they named, or the one they were just using), and work in that tab; do not open a new one. If more than one tab could be it, name them and ask once. Open a new tab only when the user gives an address that is not open yet.
 
 Before anything else in a Bridle task:
 
-1. Open or focus the page **in that Chrome**.
+1. Focus the user's tab with the page (or open the address they gave) **in their Chrome**.
 2. Press the reveal shortcut (**Command+Shift+9** on macOS, **Ctrl+Shift+9** elsewhere). Do it at the start of every Bridle task and again after a reload or navigation.
 3. Bridle's bar is now on the page, at the bottom right: a toolbar named **Bridle.io** whose first button is **Pick any element to add feedback**. Find it the way you find anything on a page; after the shortcut, Bridle's bar, notes and receipts are readable and pressable like the page's own elements. No bar: you may be in the wrong browser, or Bridle is missing, turned off or not allowed on this site. Check which it is (see [visual feedback](references/visual-feedback.md)) and tell the user the specific reason. Do not guess addresses or start picking elements before the bar is there.
 4. **Every new feedback starts with the modified picker click:** hold **Command+Shift** (macOS) or **Ctrl+Shift** (elsewhere) while clicking **Pick any element to add feedback**, release, then pick the element. Only that click opens Bridle's note for assistants; an ordinary click opens the full Add feedback form meant for people.
