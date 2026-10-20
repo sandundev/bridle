@@ -1,7 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bridle",
-  "version": "0.9.2",
+  "version": "0.9.3",
+  "license": "SEE LICENSE IN LICENSE",
   "description": "Capture website feedback in Bridle before implementation, preserve REQ audit references, and guide review, diagnostics and handoff.",
   "author": {
     "name": "Bridle"
@@ -11,7 +12,7 @@
       "interface": {
         "displayName": "Bridle",
         "shortDescription": "Bridle feedback workflows",
-        "longDescription": "Use the Bridle Chrome extension to capture and verify website feedback before implementing changes. Reuse saved REQ IDs, obtain the Bridle AI prompt or connector context, implement in the user\u2019s repository, and report verification per feedback. Also guides editing, review, completion, replay, diagnostics and ticket workflows. Requires Bridle installed in the connected Chrome profile and host-provided browser access; coding requires repository access. Typed and spoken requests are supported; speech-to-text spellings such as "Bridal" are read as Bridle. When the user asks to capture and fix, the feedback is saved first so the fix has a record to review. Several matching elements are counted and the user is asked once: separate feedbacks or one on all of them.",
+        "longDescription": "Use the Bridle Chrome extension to capture and verify website feedback before implementing changes. Reuse saved REQ IDs, obtain the Bridle AI prompt or connector context, implement in the user’s repository, and report verification per feedback. Also guides editing, review, completion, replay, diagnostics and ticket workflows. Requires Bridle installed in the connected Chrome profile and host-provided browser access; coding requires repository access. Typed and spoken requests are supported; speech-to-text spellings such as “Bridal” are read as Bridle. When the user asks to capture and fix, the feedback is saved first so the fix has a record to review. Several matching elements are counted and the user is asked once: separate feedbacks or one on all of them.",
         "developerName": "Bridle",
         "category": "Productivity",
         "capabilities": [
