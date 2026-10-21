@@ -12,7 +12,8 @@ There are two ways:
 
 1. **The completion link.** A coding assistant that handled feedback from Bridle's folder ends its reply with a link of the form `https://bridle.io/done#k=<code>&ok=REQ-001,REQ-004` (the exact link, with the install's own code, is in the folder's `README.md`). The user opens it in the Chrome where Bridle is installed. Bridle shows a panel: “Your AI reported the following N feedbacks as completed.”, each feedback with **Open page**, then **Reset markers** (undo) and **That's great, I'll review**.
    - Only put IDs in `ok=` that you actually handled. Never invent or change the code.
-   - Opening the link is a status change made by the user. It is not proof a fix works, and not a deployment.
+   - Opening the link is a status change. The user opens it, or you do when the user asked you to implement the feedback and you control their Chrome. Either way it is not proof a fix works, and not a deployment.
+   - After it, stop: the green markers, the notes and “Are you happy with the change?” are the user's review. Do not hide markers or notes, delete, or answer the question unless the user asks.
 2. **By hand.** On a single saved feedback's panel (opened from its marker, or from its row in the Feedbacks list), **Mark as completed**.
 
 After either, the marker is green where its element can still be found. A green marker wins over a red “text changed” marker, because a fixed element's text has usually changed.
