@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bridle",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "license": "SEE LICENSE IN LICENSE",
   "description": "Capture every requested website change as Bridle feedback before implementing it, implement from Bridle’s prompt for that feedback, and guide review, diagnostics and handoff.",
   "author": {
