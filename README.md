@@ -13,11 +13,11 @@ Bridle is a reusable skill for working with the **Bridle Chrome extension** thro
 
 **Codex.** In a Codex chat, ask:
 
-> Use the skill-installer to install the Bridle skill from `https://github.com/sandundev/bridle/tree/main/skills/bridle`. Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
+> Install the Bridle skill: download `https://bridle.io/skills/bridle.zip` and unzip it into `~/.codex/skills/` (that makes `~/.codex/skills/bridle` with SKILL.md and its references). Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
 
 **Claude Code.** In Claude Code, ask:
 
-> Install the Bridle skill: copy the folder `https://github.com/sandundev/bridle/tree/main/skills/bridle` (SKILL.md and its references folder) into `~/.claude/skills/bridle`. Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
+> Install the Bridle skill: download `https://bridle.io/skills/bridle.zip` and unzip it into `~/.claude/skills/` (that makes `~/.claude/skills/bridle` with SKILL.md and its references). Then read the installed SKILL.md and follow it for the rest of this chat, and give me Bridle's short first-time setup guide with `https://bridle.io/setup`.
 
 Assistants load skills when a chat starts, so these lines ask the assistant to read the installed skill straight away and use it in the same chat; new chats load it by themselves. On the first Bridle-related turn it gives a short setup guide (unless you say setup is done, or you paste a prompt Bridle copied for you) with copy-ready examples:
 
@@ -41,7 +41,7 @@ Assistants load skills when a chat starts, so these lines ask the assistant to r
 - `skills/bridle/SKILL.md` — the workflow and first-time setup guidance
 - `skills/bridle/references/` — detailed feedback, completion, connector, replay and ticket guides
 
-The public GitHub repository is the distribution source for the skill. OpenAI directory review and publication are separate steps. No Bridle MCP or model API is included.
+bridle.io is the distribution source for the skill (`https://bridle.io/skills/bridle.zip`, the same version as `plugin.json`); this repository mirrors it. OpenAI directory review and publication are separate steps. No Bridle MCP or model API is included.
 
 ## License
 

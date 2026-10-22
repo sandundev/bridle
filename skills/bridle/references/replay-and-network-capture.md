@@ -28,7 +28,7 @@ Network requests/responses may contain private content or identifiers even when 
 1. Open **Capture network requests** and review the evidence choices and exclusions.
 2. Start only after the user has clearly requested the capture and the capture scope is understood. Confirm the UI reports **Network capture started** and shows the NET indicator.
 3. Reproduce only the user-described behavior. Keep the browser on the relevant page; don't browse unrelated accounts or records while capturing.
-4. Stop with the in-page NET indicator's **Stop** control or the Bridle toolbar action. The stop path saves and opens/reveals the result for review; **Discard** deletes the unsaved capture. Choose discard only when asked or when the user approves discarding.
+4. Stop with the in-page NET indicator's **Stop** control. The stop path saves and opens/reveals the result for review; **Discard** deletes the unsaved capture. Choose discard only when asked or when the user approves discarding.
 5. Review the saved capture. The launcher may open the capture recording list; the newly stopped capture may also have a review notification. Verify the capture and any replay before reporting completion.
 6. Sharing, exporting, attaching to a feedback item, or sending to an AI tool is a separate decision. Do not assume a standalone network capture is attached to the selected feedback automatically; verify an explicit link/attachment in the UI.
 
