@@ -4,7 +4,7 @@
 
 This is the operational reference for Bridle's current extension UI.
 
-**Finding Bridle's controls.** After the reveal shortcut, Bridle's bar (a toolbar named **Bridle.io**, bottom right), its note and its receipts are on the page like any other element, with the names used below. Find and press them the way your browser tool finds page elements.
+**Finding Bridle's controls.** After the panel shortcut, Bridle's bar (a toolbar named **Bridle.io**, bottom right), its assistant panel (**Bridle for AI assistants**), its note and the status pill (**Bridle · …**, bottom left) are on the page like any other element, with the names used below. Find and press them the way your browser tool finds page elements, and press nothing else.
 
 ## Capturing feedback as an assistant
 
@@ -12,14 +12,12 @@ Use this for every new feedback you capture. Everything happens in one small not
 
 | Action | macOS | Windows / Linux / ChromeOS |
 |---|---|---|
-| Reveal Bridle on the page | Command+Shift+9 | Ctrl+Shift+9 |
-| Start a capture | Hold Command+Shift and click **Pick any element to add feedback** | Hold Ctrl+Shift and click **Pick any element to add feedback** |
+| Show Bridle and the assistant panel | Command+Shift+9 | Ctrl+Shift+9 |
+| Start a feedback | Command+Shift+8 | Ctrl+Shift+8 |
 | Save | The note's **Save** button, or Command+Enter | The note's **Save** button, or Ctrl+Enter |
 
-The `9` is only for revealing the bar. For the picker click hold the same modifiers without `9`, and release them before you pick the element.
-
-1. **Reveal and start.** Send the reveal shortcut: the **Bridle.io** bar appears at the bottom right. Hold the modifiers and click its picker. Do this for each feedback, including after a reload or navigation.
-2. **Pick.** Move over the element the user means until the highlight outlines it, and click near the middle of its visible text or content.
+1. **Start.** Press the feedback shortcut. The status pill says **Picking: click the element (Esc cancels)**, and a hint at the top of the page says the same. Do this for each feedback, including after a reload or navigation. Pressing it again while picking, or while a note is open, does nothing: read the status instead. (An older Bridle without the panel and status: hold the same modifiers and click **Pick any element to add feedback** on the bar, release them, then pick.)
+2. **Pick.** Move over the element the user means until the highlight outlines it, and click near the middle of its visible text or content. The status changes to **Draft open on** and the element.
 3. **The note.** A small handwritten note appears next to the element:
 
    | Part | What it is |
@@ -35,11 +33,11 @@ The `9` is only for revealing the bar. For the picker click hold the same modifi
 
 4. **Check what it is on, and correct it here.** Read the selected line. It should name the element the user meant, with its text. If it names something smaller inside it (part of an icon or a drawing, one word of a link, an inner `span`), press **↑ Parent** until it names the right element; if you went one step too far, press **↓ Back**. If Parent reaches the whole section or page without passing the element, press **Repick** and pick nearer the middle of the element. The note hides for a moment after Parent or Back while Bridle photographs the element.
 5. **Write and save.** Set the type, type the request into **Feedback text** (append further wording to the same text; never start a second draft for additions), then press **Save** at once. The user's request to add the feedback is their permission to save it: do not stop to ask “shall I save?”, because a draft left open is lost when the page changes. Ask first only if the target, type or wording is genuinely unclear. If your own browser tool insists on confirming before it presses anything on a page, say so once, plainly, and suggest the user add “and save it” to the request or allow this site in that tool's settings.
-6. **Read the receipt.** A toast at the bottom of the page says **Saved REQ-… · Type: text** for about four seconds (with “screenshot pending” when the tab was not in front), and the note becomes a saved note and marker. If you missed it, find the REQ ID in the Feedbacks list before retrying, so you never save twice.
+6. **Read the receipt.** The status says **Saved REQ-… · Type** (with “screenshot pending” when the tab was not in front) and keeps it until the next action; a toast with the text shows for about four seconds as well. The note becomes a saved note and marker. **Not saved** or **Stopped** says why: read it before doing anything else, so you never save twice.
 
 If the bar is absent after the shortcut, first make sure you are in the user's own Chrome: a browser built into your app (a preview or browser pane) never has Bridle. Then focus the page and retry once, then reload and send the shortcut again. Check whether Bridle is installed/enabled in the controlled profile, allowed on this site, and whether the shortcut is assigned in `chrome://extensions/shortcuts`. Browser pages, extension-store pages, missing site access, disabled extensions and some browser-control transports can prevent the shortcut or injection. Report the **specific blocker and recovery attempts**, rather than simply saying the bar is missing. Do not report a capture that did not happen; ask the user how to proceed. Older extension builds must be updated for this workflow; request that update if the shortcut/gesture is unavailable.
 
-A normal unmodified picker click is the human takeover path and returns to the ordinary form. Escape, navigation, reload, or five minutes without capture activity ends the temporary assistant state. Do not infer who is clicking from `isTrusted`.
+A plain click on the bar's picker is the human takeover path: it opens the ordinary form and ends assistant mode. Escape, navigation, reload, or five minutes without capture activity ends the temporary assistant state. Do not infer who is clicking from `isTrusted`.
 
 ## The full Add feedback form
 
@@ -101,7 +99,7 @@ Bridle has no page-level feedback: every feedback is attached to an element. Whe
 
 ## See all feedback on the page at once
 
-The **⋮** on the Bridle bar has **Show feedback as notes**: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in type-coloured handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
+**Show or hide feedback notes** in the assistant panel (for a person: the ⋮ on the Bridle bar, **Show feedback as notes**) turns on notes: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in type-coloured handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
 
 ## Selection and save recovery
 
