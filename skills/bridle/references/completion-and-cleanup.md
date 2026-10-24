@@ -33,9 +33,9 @@ Open the green marker (or the feedback's row). The panel says “Your AI reporte
 
 A completed feedback is read-only: there is no edit button on it in its panel or in the Feedbacks list. If the user wants it worked on again, use No → **Re-target**.
 
-## Markers and completed feedback in the assistant panel
+## Markers and completed feedback in Shortcuts
 
-The assistant panel (Command+Shift+9; the bar's ⋮ opens it too while assistant mode is on) has, under **Feedback** and **Clean up**:
+Shortcuts (the bar's ⋮ while assistant mode is on) has, under **Feedback** and **Clean up**:
 
 - **Show or hide markers on this page** (until reload).
 - **Hide green markers**, **Show hidden green markers**.
@@ -47,9 +47,9 @@ The assistant panel (Command+Shift+9; the bar's ⋮ opens it too while assistant
 |---|---|
 | “Keep it” | Press **Keep it**. |
 | “Hide that green marker” / “hide the green ones” | Hide → the matching choice. Reversible, so you may do it. |
-| “Show the hidden ones again” | Assistant panel → **Show hidden green markers**. |
+| “Show the hidden ones again” | Shortcuts → **Show hidden green markers**. |
 | “Delete REQ-004” | Open REQ-004, follow Yes → **Delete feedback**, and **stop at the confirmation**. Say: “The delete confirmation for REQ-004 is open; press Delete feedback to remove it permanently.” Deletion has no undo, so the user presses it. |
-| “Delete all the completed ones” | Assistant panel → **Delete completed feedback**, read the count in the confirmation, tell the user it covers every page, and let them press it. |
+| “Delete all the completed ones” | Shortcuts → **Delete completed feedback**, read the count in the confirmation, tell the user it covers every page, and let them press it. |
 | “It's not right, the wrong thing was changed” | No → **Re-target**, pick the right element, check the feedback is open again. |
 | “Clear these” (unclear) | Ask: hide (keeps them) or delete (removes them)? |
 

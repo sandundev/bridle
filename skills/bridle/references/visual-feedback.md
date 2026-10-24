@@ -4,7 +4,7 @@
 
 This is the operational reference for Bridle's current extension UI.
 
-**Finding Bridle's controls.** After the panel shortcut, Bridle's bar (a toolbar named **Bridle.io**, bottom right), its assistant panel (**Bridle for AI assistants**), its note and the status pill (**Bridle · …**, bottom left) are on the page like any other element, with the names used below. Find and press them the way your browser tool finds page elements, and press nothing else.
+**Finding Bridle's controls.** After Command+Shift+9, Bridle's bar (a toolbar named **Bridle.io**, bottom right), **Shortcuts** (from the bar's ⋮, when you open it), its note and the status pill (**Bridle · …**, bottom left) are on the page like any other element, with the names used below. Find and press them the way your browser tool finds page elements, and press nothing else.
 
 ## Capturing feedback as an assistant
 
@@ -12,11 +12,11 @@ Use this for every new feedback you capture. Everything happens in one small not
 
 | Action | macOS | Windows / Linux / ChromeOS |
 |---|---|---|
-| Show Bridle and the assistant panel | Command+Shift+9 | Ctrl+Shift+9 |
+| Show Bridle's bar and status | Command+Shift+9 | Ctrl+Shift+9 |
 | Start a feedback | Command+Shift+8 | Ctrl+Shift+8 |
 | Save | The note's **Save** button, or Command+Enter | The note's **Save** button, or Ctrl+Enter |
 
-1. **Start.** Press the feedback shortcut. The status pill says **Picking: click the element (Esc cancels)**, and a hint at the top of the page says the same. Do this for each feedback, including after a reload or navigation. Pressing it again while picking, or while a note is open, does nothing: read the status instead. (An older Bridle without the panel and status: hold the same modifiers and click **Pick any element to add feedback** on the bar, release them, then pick.)
+1. **Start.** Press the feedback shortcut. The status pill says **Picking: click the element (Esc cancels)**, and a hint at the top of the page says the same. Do this for each feedback, including after a reload or navigation. Pressing it again while picking, or while a note is open, does nothing: read the status instead. (An older Bridle without the status pill: hold the same modifiers and click **Pick any element to add feedback** on the bar, release them, then pick.)
 2. **Pick.** Move over the element the user means until the highlight outlines it, and click near the middle of its visible text or content. The status changes to **Draft open on** and the element.
 3. **The note.** A small handwritten note appears next to the element:
 
@@ -91,15 +91,21 @@ Bridle has no page-level feedback: every feedback is attached to an element. Whe
 
 ## Edit an existing item
 
-1. Open the Bridle feedback workspace from the main Bridle bar body/count area, or use **View all feedback** when available. Do not click one of the bar's utility icons by mistake.
-2. Locate the exact item by its feedback text, page/URL, and element context. Use the item-level action named **Edit this feedback** or **Edit REQ-… feedback**.
-3. Avoid the separate **Edit** beside **Send to AI**. That control opens Claude/Codex/Gemini tool preferences; it does not edit the feedback request.
-4. Verify the editor says **Update feedback**, the correct target is previewed, and the existing request is prefilled. Change only what the user asked to change, then click **Update**.
-5. Verify **Feedback saved** and confirm the updated text on the same item. If the item belongs to another URL, use Bridle's explicit visit-original-page path. If the target is stale, Bridle may offer a repair picker that preserves the existing text and evidence.
+Change the saved feedback; never add a second one with the new words. Pick the first way that applies:
+
+1. **Its badge is on the page** (the page the feedback was given on, its element on screen): press the button named **REQ-… feedback badge: …** (the badge beside the element). Its panel opens; press **Edit REQ-… feedback** (the pencil on that feedback's row).
+2. **No badge for it on screen** (another page, the element scrolled away, the badge not drawn): press **Bridle.io** on the bar (or **Open the Feedbacks list** in Shortcuts), find the row by its REQ ID and text, open it and press **Edit this feedback**.
+
+Then, either way:
+
+3. The form says **Update feedback** with the saved words in its text box. Change only what the user asked to change, then press **Update**.
+4. Read the status: **Updated REQ-… · Type** means the same feedback now has the new words. **Not saved** means the form says why: read it before trying again. Tell the user the REQ ID.
+
+Do not press the **Edit** beside **Send to AI**: it edits the AI tool settings, not the feedback. A completed (green) feedback has no edit button: see [completion and cleanup](completion-and-cleanup.md). When the element itself has changed and the badge cannot find it, Bridle may offer a repair picker that keeps the text and evidence.
 
 ## See all feedback on the page at once
 
-**Show or hide feedback notes** in the assistant panel (for a person: the ⋮ on the Bridle bar, **Show feedback as notes**) turns on notes: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in type-coloured handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
+**Show or hide feedback notes** in Shortcuts (for a person: the ⋮ on the Bridle bar, **Show feedback as notes**) turns on notes: up to 12 notes nearest the viewport middle are shown for visible feedback markers; when several requests share an element, its representative request is written beside it in type-coloured handwriting, with a circle, underline or arrow to it (green with a tick when completed). It is a quick way to review a page with the user, or to check that each feedback points at the right element. Pressing a note opens that feedback's panel. Hovering a note shows a ×: **Close this note** (its badge stays) or **Close all notes** (back to badges only). **Hide feedback notes** in the ⋮ menu turns them off too. A note shows only the words; its type and REQ ID are in its tooltip.
 
 ## Selection and save recovery
 
