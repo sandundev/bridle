@@ -4,7 +4,7 @@
 
 <!-- Written by scripts/build-assistant-actions-reference.mjs from extension/js/assistant-actions.js. Do not edit by hand. -->
 
-**Command+Shift+9 on macOS, Ctrl+Shift+9 elsewhere** shows Bridle's bar and its status pill, and nothing else. **Shortcuts** is the panel with every action below, grouped, each a button with exactly this name, plus the two keys, Bridle's version (**assistant actions 1**) and the status. Open it with the bar's ⋮ (**Quick actions**) only when you need an action below that has no key. It sits over the page the user is watching, so it never stays: it closes after a minute unused, at a press outside it, when one of its actions runs, when picking starts, and on Escape (assistant mode stays). Open it again from the ⋮ when you need it; never keep it open.
+**Command+Shift+9 on macOS, Ctrl+Shift+9 elsewhere** in a tab makes it the tab the user sees (the active tab of its window, the window focused, its tab group opened) and shows Bridle's bar and its status pill; nothing covers the page. **Shortcuts** is the panel with every action below, grouped, each a button with exactly this name, plus the two keys, Bridle's version (**assistant actions 1**) and the status. Open it with the bar's ⋮ (**Quick actions**) only when you need an action below that has no key. It sits over the page the user is watching, so it never stays: it closes after a minute unused, at a press outside it, when one of its actions runs, when picking starts, and on Escape (assistant mode stays). Open it again from the ⋮ when you need it; never keep it open.
 
 Press only these buttons, or a control a step in the skill names. A button greyed out with “Not available now” has nothing to act on.
 

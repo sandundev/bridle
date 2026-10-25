@@ -12,7 +12,7 @@ Use this for every new feedback you capture. Everything happens in one small not
 
 | Action | macOS | Windows / Linux / ChromeOS |
 |---|---|---|
-| Show Bridle's bar and status | Command+Shift+9 | Ctrl+Shift+9 |
+| Put the tab in front, show Bridle's bar and status | Command+Shift+9 | Ctrl+Shift+9 |
 | Start a feedback | Command+Shift+8 | Ctrl+Shift+8 |
 | Save | The note's **Save** button, or Command+Enter | The note's **Save** button, or Ctrl+Enter |
 
