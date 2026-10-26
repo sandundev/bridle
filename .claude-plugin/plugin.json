@@ -7,5 +7,13 @@
   },
   "homepage": "https://bridle.io/setup",
   "license": "SEE LICENSE IN LICENSE",
-  "keywords": ["bridle", "feedback", "chrome", "browser", "visual-feedback", "review"]
+  "keywords": [
+    "bridle",
+    "feedback",
+    "chrome",
+    "browser",
+    "visual-feedback",
+    "review"
+  ],
+  "privacyPolicyUrl": "https://bridle.io/privacy"
 }
