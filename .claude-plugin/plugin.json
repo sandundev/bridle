@@ -1,7 +1,7 @@
 {
   "name": "bridle",
   "version": "0.10.14",
-  "description": "Capture every requested website change as Bridle feedback before implementing it, implement from Bridle's prompt for that feedback, and guide review, diagnostics and handoff.",
+  "description": "Use the Bridle.io browser extension to capture, review, or hand off website feedback, including implementation from saved feedback. Use it when the user asks for a change to a website open in Chrome, capturing the change as Bridle feedback first.",
   "author": {
     "name": "Bridle"
   },
@@ -14,6 +14,5 @@
     "browser",
     "visual-feedback",
     "review"
-  ],
-  "privacyPolicyUrl": "https://bridle.io/privacy"
+  ]
 }
