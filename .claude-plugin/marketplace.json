@@ -1,0 +1,20 @@
+{
+  "name": "bridle",
+  "owner": {
+    "name": "Bridle"
+  },
+  "metadata": {
+    "description": "Bridle feedback workflows for Claude Code: capture website feedback in Chrome and implement it from Bridle's prompt.",
+    "version": "0.10.14"
+  },
+  "plugins": [
+    {
+      "name": "bridle",
+      "source": "./",
+      "description": "Capture, review and hand off website feedback made with the Bridle Chrome extension.",
+      "version": "0.10.14",
+      "category": "productivity",
+      "homepage": "https://bridle.io/setup"
+    }
+  ]
+}

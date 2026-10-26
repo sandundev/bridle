@@ -1,0 +1,11 @@
+{
+  "name": "bridle",
+  "version": "0.10.14",
+  "description": "Capture every requested website change as Bridle feedback before implementing it, implement from Bridle's prompt for that feedback, and guide review, diagnostics and handoff.",
+  "author": {
+    "name": "Bridle"
+  },
+  "homepage": "https://bridle.io/setup",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["bridle", "feedback", "chrome", "browser", "visual-feedback", "review"]
+}
