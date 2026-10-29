@@ -1,12 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bridle",
-  "version": "0.10.14",
+  "version": "0.10.15",
   "license": "SEE LICENSE IN LICENSE",
   "description": "Capture every requested website change as Bridle feedback before implementing it, implement from Bridle’s prompt for that feedback, and guide review, diagnostics and handoff.",
   "author": {
     "name": "Bridle"
   },
+  "homepage": "https://bridle.io",
   "extensions": {
     "com.openai": {
       "interface": {
@@ -15,6 +16,12 @@
         "longDescription": "Use the Bridle Chrome extension to capture and verify website feedback before implementing changes. Reuse saved REQ IDs, obtain the Bridle AI prompt or connector context, implement in the user’s repository, and report verification per feedback. Also guides editing, review, completion, replay, diagnostics and ticket workflows. Requires Bridle installed in the connected Chrome profile and host-provided browser access; coding requires repository access. Typed and spoken requests are supported; speech-to-text spellings such as “Bridal” are read as Bridle. When the user asks to capture and fix, the feedback is saved first so the fix has a record to review. Several matching elements are counted and the user is asked once: separate feedbacks or one on all of them.",
         "developerName": "Bridle",
         "category": "Productivity",
+        "websiteURL": "https://bridle.io",
+        "supportURL": "https://bridle.io/support",
+        "privacyPolicyURL": "https://bridle.io/privacy",
+        "termsOfServiceURL": "https://bridle.io/terms",
+        "logo": "./assets/bridle-icon.png",
+        "composerIcon": "./assets/bridle-icon.png",
         "capabilities": [
           "Interactive"
         ],
@@ -23,6 +30,16 @@
           "Inspect an existing Bridle feedback replay or capture network diagnostics.",
           "Create or link a Bridle or Jira ticket from feedback."
         ]
+      },
+      "review": {
+        "prompts": [
+          "Use Bridle in Chrome to capture a change request on this page and tell me its REQ ID.",
+          "Summarize my open Bridle feedback for this page without changing code.",
+          "Implement my saved Bridle feedback in this repository and verify the result."
+        ]
+      },
+      "publication": {
+        "countries": []
       }
     }
   }
