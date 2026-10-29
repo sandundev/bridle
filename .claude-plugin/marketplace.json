@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Bridle feedback workflows for Claude Code: capture website feedback in Chrome and implement it from Bridle's prompt.",
-    "version": "0.10.16"
+    "version": "0.10.17"
   },
   "plugins": [
     {
       "name": "bridle",
       "source": "./",
       "description": "Capture, review and hand off website feedback made with the Bridle Chrome extension.",
-      "version": "0.10.16",
+      "version": "0.10.17",
       "category": "productivity",
       "homepage": "https://bridle.io/setup"
     }
